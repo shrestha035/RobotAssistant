@@ -3,8 +3,11 @@ name: Greeting Workflow
 on: [push]  # Triggers on push to any branch
 
 jobs:
-  say-hello:  # Job name (must be indented 2 spaces under 'jobs')
-    runs-on: ubuntu-latest  # Runner environment (must be indented 4 spaces under 'say-hello')
+  say-hello:  # Job name
+    runs-on: ubuntu-latest  # Runner environment
     steps:  # Required: List of steps to execute
+      - uses: actions/checkout@v4  # Checks out your repository code
       - name: Print greeting  # Step name (optional but recommended)
         run: echo "Hello, world!"  # Command to run
+      - name: Run Python Tests  # Step to execute the test
+        run: python3 test_calc.py  # Runs the test file directly
