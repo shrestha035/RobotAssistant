@@ -1,6 +1,10 @@
 name: Greeting Workflow
-on: [push]
+
+on: [push]  # Triggers on push to any branch
 
 jobs:
-say-hello:
-runs-on: ubuntu-latest
+  say-hello:  # Job name (must be indented 2 spaces under 'jobs')
+    runs-on: ubuntu-latest  # Runner environment (must be indented 4 spaces under 'say-hello')
+    steps:  # Required: List of steps to execute
+      - name: Print greeting  # Step name (optional but recommended)
+        run: echo "Hello, world!"  # Command to run
