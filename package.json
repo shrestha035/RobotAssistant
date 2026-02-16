@@ -1,0 +1,12 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A secure weather app with CI/CD",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node app.js"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
